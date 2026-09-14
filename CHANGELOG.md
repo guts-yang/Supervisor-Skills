@@ -4,6 +4,35 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-09-14
+
+### Added
+
+- Added `benchmark-baseline-table`, which turns a domain survey into a
+  maintainable SOTA/baseline comparison table. It ships a nine-stage
+  pipeline (preflight parameter lock, benchmark and anchor scoping,
+  multi-axis parallel corpus search, PDF acquisition with three-gate
+  validation, numeric extraction with mandatory baseline
+  reconciliation, structured deep-read notes, A/B sheet construction,
+  three-condition baseline selection, independent verification), a
+  stage map with fan-out guidance, five hard rules led by caliber
+  isolation, a twelve-item pitfall list, and a five-check integrity
+  gate. Three reference files back it: `references/staged-prompts.md`
+  (P0 to P8 copy-paste prompt templates),
+  `references/table-schema.md` (A/B column templates, marker
+  promotion conditions, eight maintenance iron rules, spreadsheet
+  operation notes), and `references/case-study.md` (one complete
+  worked run in machine unlearning). Cross-references route only to
+  skills that exist in this repository.
+
+### Changed
+
+- Registry documentation updated for the twelfth skill:
+  `README.md`, `README.en.md`, `skills/README.md`,
+  `skills/README.en.md`, `llms.txt`, and `CONTRIBUTING.md` now list
+  `benchmark-baseline-table` and the repository is described as
+  twelve anchor skills (v2.2.0).
+
 ## [2.1.0] - 2026-07-10
 
 ### Added

@@ -18,6 +18,7 @@ English · [中文](README.md)
 
 ## 📰 News
 
+> - **[2026-09-14]** 🧪 **v2.2**: new skill `benchmark-baseline-table`, turning a domain survey into a maintainable SOTA/baseline comparison table through a nine-stage pipeline, caliber isolation rules, anchor reconciliation, and row-level source traceability. See the [CHANGELOG](CHANGELOG.md).
 > - **[2026-07-15]** 🤝 In partnership with **Doubao**, Supervisor-Skills has been officially deployed as the core research skill suite of **Doubao Office Mode**, powering its "**Research Evaluation**" and "**Academic Writing**" capabilities and bringing this project's research methodology to a massive user base.
 > - **[2026-07-10]** 🚀 **v2.1**: three new skills, `paper-writer` (evidence-gated paper drafting), `paper-polish` (meaning-preserving polishing), and `deep-research` (survey-grade literature investigation); `intro-drafter` now outputs prose; paradigm-aware routing lands in the evaluation and review skills. See the [CHANGELOG](CHANGELOG.md).
 > - **[2026-07-03]** 🎤 Invited talk at the Skill session of the **2026 China Agent Conference**.
@@ -139,6 +140,7 @@ Supervisor-Skills/
 │   ├── intro-drafter/
 │   ├── paper-writer/
 │   ├── benchmark-paper-template/
+│   ├── benchmark-baseline-table/
 │   ├── paper-polish/
 │   ├── pre-submission-reviewer/
 │   ├── figure-designer/
@@ -178,6 +180,7 @@ This is the core of the repository. The theoretical experience above is distille
 | **Deep Research** | Survey-grade literature investigation: multi-perspective search, per-citation verification, MECE synthesis with cross-comparison, delivered as a survey report that answers explicit research questions. | [Use skill](skills/deep-research/SKILL.md) |
 | **Tech Paper Template** | Based on the "Technical Full Paper thinking template", walks you through the full logical chain of your paper. | [Use skill](skills/tech-paper-template/SKILL.md) |
 | **Benchmark Paper Template** | Designed for Benchmark/Evaluation papers, helping you structure evaluation logic and experimental design. | [Use skill](skills/benchmark-paper-template/SKILL.md) |
+| **Benchmark Baseline Table** | Turns a domain survey into a maintainable SOTA/baseline comparison table: caliber isolation, anchor reconciliation, staged parallel search, row-level traceability, and a frozen reproducible baseline. | [Use skill](skills/benchmark-baseline-table/SKILL.md) |
 | **Pre-Submission Reviewer** | Reviewer's perspective at a top venue — runs a full review over your draft based on the writing checklist and common English grammar pitfalls. | [Use skill](skills/pre-submission-reviewer/SKILL.md) |
 | **Figure Design Advisor** | Tell the AI what you want to express; it returns professional drawing advice based on the motivated / overview / experimental figure paradigms. | [Use skill](skills/figure-designer/SKILL.md) |
 | **Draw.io Reconstruction** | Rebuild reference images, paper figures, architecture diagrams, slide diagrams, or UI screenshots into editable `.drawio` files with PNG previews and visual audits. | [Use skill](skills/drawio-reconstruction/SKILL.md) |

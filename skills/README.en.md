@@ -1,4 +1,4 @@
-# Skills: a reader's guide to the eleven executable skills
+# Skills: a reader's guide to the twelve executable skills
 
 English · [中文](README.md)
 
@@ -12,14 +12,14 @@ Supervisor-Skills is layered by audience:
 |---|---|---|
 | Top-level [`README.en.md`](../README.en.md) | First-time visitors | Why the project exists, tutorial structure, how to install |
 | [`handbook/`](../handbook/) (Chinese, canonical) / [`handbook-en/`](../handbook-en/) (English mirror) | Readers who want the methodology | Six chapters of research and writing handbook (the theoretical spine) |
-| **This file** | Readers who want the skills directly | **What each of the 11 skills is, when to use it, how it chains with the others** |
+| **This file** | Readers who want the skills directly | **What each of the 12 skills is, when to use it, how it chains with the others** |
 | `SKILL.md` (inside each skill directory) | Agent runtimes / LLMs | Executable spec: integrity gates, output formats, mode options — machine-readable, not optimised for human browsing |
 
 In one line: **the handbook teaches the way, SKILL.md runs the tool, this README is the bridge between them.**
 
 ## Two narrative tracks: technical paper vs benchmark paper
 
-The eleven skills are not isolated tools. They map to two complete lifecycles of a top-venue paper and add survey-grade research, evidence-gated drafting and polishing, and an execution-oriented Draw.io reconstruction capability. Locate yourself on the right track first, then pick the skill you need.
+The twelve skills are not isolated tools. They map to two complete lifecycles of a top-venue paper and add survey-grade research and maintainable baseline tables on the research side, evidence-gated drafting and polishing on the output side, and an execution-oriented Draw.io reconstruction capability. Locate yourself on the right track first, then pick the skill you need.
 
 ### Track 1: technical / position paper (new method for an existing problem)
 
@@ -45,6 +45,8 @@ The benchmark pipeline is more strictly sequential than the technical-paper trac
 
 For a benchmark paper, the starting and ending point are both this one skill; the two core figures additionally need figure-designer, existing reference images or screenshots can be executed with drawio-reconstruction, and the pre-submission audit still lands on pre-submission-reviewer.
 
+If what you need is not **designing a new benchmark** but **a cross-comparison table over existing benchmarks** (who has run on TOFU or MUSE, with what numbers, and which of them you should reproduce), that is the job of **[benchmark-baseline-table](benchmark-baseline-table/SKILL.md)**: it turns a batch of papers into a maintainable two-file table and freezes a reproducible baseline for your own experiments.
+
 ### Already stuck somewhere?
 
 Readers with a specific bottleneck can skip the reading order and jump straight to the relevant skill:
@@ -58,9 +60,10 @@ Readers with a specific bottleneck can skip the reading order and jump straight 
 - Have a reference figure, paper figure, architecture diagram, or screenshot and need editable Draw.io → **drawio-reconstruction**
 - Pre-submission panic, unclear what to check → **pre-submission-reviewer**
 - Cannot articulate the benchmark gap or organise evaluation dimensions → **benchmark-paper-template**
+- Need to turn a pile of papers into a maintainable comparison table and freeze a reproducible baseline → **benchmark-baseline-table**
 - Unsure how to delegate to AI without diluting academic judgment → **vibe-research-workflow**
 
-## The eleven skill cards
+## The twelve skill cards
 
 Each card translates the SKILL.md spec into plain-reader language, adds the matching handbook chapters, and notes the upstream/downstream skills.
 
@@ -135,6 +138,20 @@ Each card translates the SKILL.md spec into plain-reader language, adds the matc
 - **Output**: per-stage deliverables + a six-part Introduction logic chain + a Section 2-7 skeleton + a pre-submission checklist.
 - **Matching handbook chapters**: [3.4 Benchmark and evaluation paper template](../handbook-en/03_Paper_Writing/3.4_benchmark-paper-template.md) · [6.3 LEAD writing analysis](../handbook-en/06_Case_Studies/6.3_vldb2026-lead-analysis.md)
 - **Cross-link**: figure-designer (the two core figures) · pre-submission-reviewer (final audit).
+
+### benchmark-baseline-table — from domain survey to a maintainable comparison table
+
+- **Positioning**: distils a domain survey into a **long-lived** SOTA/baseline comparison table (a Markdown constraint document plus an Excel data workbook, one writer per file), and freezes a reproducible baseline from it. It is neither a survey nor a leaderboard screenshot: every row must be able to answer "which table on which page did this number come from".
+- **When to trigger**:
+  - "Build the SOTA table for this domain" / "set up a folder to maintain this table long term"
+  - "Which baselines in this field are reproducible today"
+  - "Which methods have been run on benchmark Y, and what numbers did they report"
+  - A literature sweep is finished and the results must become structured data rather than prose
+  - A baseline must be frozen before your own experiments start
+- **Key discipline**: **compare baselines before comparing numbers.** If a paper's reproduction of a public baseline (NPO or RMU, say) does not match the authoritative anchor value, every number in that paper is demoted to an isolated row and may not be compared with the main table. Missing data is written as "not reported", never invented. Non-standard metrics go into the setup-consistency note column, and a new column is never added.
+- **Nine stages**: lock three preflight parameters (folder, delivery depth, benchmark scope) → define benchmarks and anchors → search along 3 to 5 complementary axes in parallel → archive PDFs through three validation gates → extract numbers with baseline reconciliation → produce deep-read notes → build A and B sheets → select the baseline (consistent caliber, reproducible, and modifiable, all three) → verify (full-text PDF re-check, column-count check, link probe).
+- **Output**: constraint document, data workbook, helper scripts and a progress table; a full run additionally returns the numeric hit list, the structure-check report, and the evidence file for any marker that was challenged but not promoted.
+- **Up- and downstream**: upstream is **deep-research** (map the field first); downstream is **paper-writer** (the table feeds Related Work and the experimental-setup section) and **pre-submission-reviewer** (the table enters the pre-submission audit).
 
 ### figure-designer — the design advisor for the three load-bearing figures
 
@@ -235,6 +252,7 @@ Each skill's `references/` directory carries on-demand depth. For example, `idea
 | paper-writer | 3.1 / 3.3 / 3.5 |
 | paper-polish | 3.5 |
 | benchmark-paper-template | 3.4 / 6.3 |
+| benchmark-baseline-table | 3.4 (evaluation caliber and experiment design) / 1.1 (metric and evidence reading) |
 | figure-designer | 4.1 / 4.2 / 4.3 / 4.4 |
 | drawio-reconstruction | 4.4 / VCG-Bench |
 | pre-submission-reviewer | 3.5 / 1.1 |

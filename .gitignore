@@ -33,3 +33,6 @@ evals/latest-report.md
 # Temp
 *.tmp
 *.log
+
+# WorkBuddy local state
+.workbuddy/

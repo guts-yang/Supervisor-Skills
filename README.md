@@ -16,6 +16,7 @@
 
 ## 📰 News
 
+> - **[2026-09-14]** 🧪 **v2.2**：新增 `benchmark-baseline-table`（领域调研 → 可长期维护的 SOTA/baseline 对比表）：九阶段流水线、口径隔离铁律、锚点对账与逐行可溯源。详见 [CHANGELOG](CHANGELOG.md)。
 > - **[2026-07-15]** 🤝 团队与**豆包**达成合作，Supervisor-Skills 正式作为**豆包·办公模式**的核心科研技能完成部署，驱动「**科研评估**」与「**学术创作**」两大官方能力，将本项目沉淀的科研方法论带给亿级用户。
 > - **[2026-07-10]** 🚀 **v2.1**：新增 `paper-writer`（证据门控的论文正文写作）、`paper-polish`（忠于原意的语言润色）、`deep-research`（综述级文献调研）三个技能；`intro-drafter` 升级为正文输出；评估与评审技能引入学科范式路由。详见 [CHANGELOG](CHANGELOG.md)。
 > - **[2026-07-03]** 🎤 受邀在 **2026 中国智能体大会** Skill 会场进行分享。
@@ -132,6 +133,7 @@ Supervisor-Skills/
 │   ├── intro-drafter/
 │   ├── paper-writer/
 │   ├── benchmark-paper-template/
+│   ├── benchmark-baseline-table/      # 基线对比表构建与维护技能
 │   ├── paper-polish/                  # 自查与润色技能
 │   ├── pre-submission-reviewer/
 │   ├── figure-designer/
@@ -170,6 +172,7 @@ Supervisor-Skills/
 | **Deep Research** | 综述级文献深度调研：多视角检索、逐条引用核验、MECE 分类综合与交叉对比，产出逐条回答研究问题的 survey 报告 | [使用技能](skills/deep-research/SKILL.md) |
 | **Tech Paper Template** | 基于"技术类Full Paper思考模板"，辅助你一步步梳理论文的完整逻辑链 | [使用技能](skills/tech-paper-template/SKILL.md) |
 | **Benchmark Paper Template** | 专为 Benchmark/Evaluation 类论文设计，辅助梳理评估逻辑和实验设计 | [使用技能](skills/benchmark-paper-template/SKILL.md) |
+| **Benchmark Baseline Table** | 把一个领域的调研沉淀成可长期维护的 SOTA/baseline 对比表：口径隔离、锚点对账、九阶段检索与逐行可溯源，最终定下可复现基线 | [使用技能](skills/benchmark-baseline-table/SKILL.md) |
 | **Pre-Submission Reviewer** | 顶会审稿人视角！基于写作 Checklist 和英语语法易错点，对草稿进行全面审查 | [使用技能](skills/pre-submission-reviewer/SKILL.md) |
 | **Figure Design Advisor** | 告诉 AI 你想表达什么，它会根据动机图/总览图/实验图的设计范式给出专业作图建议 | [使用技能](skills/figure-designer/SKILL.md) |
 | **Draw.io Reconstruction** | 将参考图、论文图、架构图、幻灯片图或 UI 截图重建为可编辑 `.drawio` 文件，并导出 PNG 预览与视觉审计 | [使用技能](skills/drawio-reconstruction/SKILL.md) |
